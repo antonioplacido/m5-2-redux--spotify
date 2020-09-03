@@ -11,6 +11,7 @@ import { convert } from "../../helpers/util";
 const ArtistRoute = () => {
   const accessToken = useSelector((state) => state.auth.token);
   const artistId = useParams().id;
+  console.log(artistId);
   const dispatch = useDispatch();
   const artist = useSelector((state) => state.artist.currentArtist);
 

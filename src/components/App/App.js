@@ -39,7 +39,7 @@ const App = () => {
         <Route exact path="/artists/:id">
           <ArtistRoute />
         </Route>
-        <Redirect to={`/artists/${DEFAULT_ARTIST_ID}`} />
+        <Redirect from="/" to={`/artists/${DEFAULT_ARTIST_ID}`} />
       </Switch>
     </Router>
   );
