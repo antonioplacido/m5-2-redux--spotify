@@ -10,8 +10,8 @@ import { convert } from "../../helpers/util";
 
 const ArtistRoute = () => {
   const accessToken = useSelector((state) => state.auth.token);
-  const artistId = useParams().id;
-  console.log(artistId);
+  const { artistId } = useParams();
+
   const dispatch = useDispatch();
   const artist = useSelector((state) => state.artist.currentArtist);
 
@@ -20,7 +20,7 @@ const ArtistRoute = () => {
     fetchArtistProfile(accessToken, artistId)
       .then((data) => dispatch(receiveArtist(data)))
       .catch((error) => dispatch(artistError()));
-  }, [accessToken]);
+  }, [accessToken, artistId]);
 
   //so big note to self, fetching API information will always be a pain,and conditional rendering is your only wait out to display the information you need.
 
