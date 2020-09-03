@@ -50,7 +50,7 @@ const ArtistDiv = styled.div`
     padding-top: 50px;
   }
   h1 {
-    transform: translate(0%, -175%);
+    transform: translate(0%, -145%);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
   }
   h2 {
